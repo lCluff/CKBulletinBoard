@@ -8,20 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		160933D422D39A6700D2B385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160933D322D39A6700D2B385 /* AppDelegate.swift */; };
-		160933D622D39A6700D2B385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160933D522D39A6700D2B385 /* ViewController.swift */; };
 		160933D922D39A6700D2B385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160933D722D39A6700D2B385 /* Main.storyboard */; };
 		160933DB22D39A6800D2B385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160933DA22D39A6800D2B385 /* Assets.xcassets */; };
 		160933DE22D39A6800D2B385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160933DC22D39A6800D2B385 /* LaunchScreen.storyboard */; };
+		160933E722D39A9F00D2B385 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160933E622D39A9F00D2B385 /* Message.swift */; };
+		160933EC22D39F9D00D2B385 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160933EB22D39F9D00D2B385 /* MessageController.swift */; };
+		160933F422D3B30800D2B385 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160933F322D3B30800D2B385 /* MessageListTableViewController.swift */; };
+		160933F722D3B9AF00D2B385 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160933F622D3B9AF00D2B385 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		160933D022D39A6700D2B385 /* CKBulletinBoard27.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKBulletinBoard27.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		160933D322D39A6700D2B385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		160933D522D39A6700D2B385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		160933D822D39A6700D2B385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		160933DA22D39A6800D2B385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160933DD22D39A6800D2B385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160933DF22D39A6800D2B385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		160933E622D39A9F00D2B385 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		160933EA22D39EEC00D2B385 /* CKBulletinBoard27.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKBulletinBoard27.entitlements; sourceTree = "<group>"; };
+		160933EB22D39F9D00D2B385 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		160933F322D3B30800D2B385 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
+		160933F622D3B9AF00D2B385 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160933F722D3B9AF00D2B385 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +48,8 @@
 			children = (
 				160933D222D39A6700D2B385 /* CKBulletinBoard27 */,
 				160933D122D39A6700D2B385 /* Products */,
+				160933E522D39A8A00D2B385 /* Resources */,
+				160933F522D3B9AF00D2B385 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +64,64 @@
 		160933D222D39A6700D2B385 /* CKBulletinBoard27 */ = {
 			isa = PBXGroup;
 			children = (
+				160933EA22D39EEC00D2B385 /* CKBulletinBoard27.entitlements */,
+				160933E922D39E6D00D2B385 /* Model */,
+				160933E822D39E4F00D2B385 /* Views */,
+				160933EF22D39FAD00D2B385 /* Controllers */,
+			);
+			path = CKBulletinBoard27;
+			sourceTree = "<group>";
+		};
+		160933E522D39A8A00D2B385 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				160933D322D39A6700D2B385 /* AppDelegate.swift */,
-				160933D522D39A6700D2B385 /* ViewController.swift */,
-				160933D722D39A6700D2B385 /* Main.storyboard */,
 				160933DA22D39A6800D2B385 /* Assets.xcassets */,
 				160933DC22D39A6800D2B385 /* LaunchScreen.storyboard */,
 				160933DF22D39A6800D2B385 /* Info.plist */,
 			);
-			path = CKBulletinBoard27;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		160933E822D39E4F00D2B385 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				160933D722D39A6700D2B385 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		160933E922D39E6D00D2B385 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				160933E622D39A9F00D2B385 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		160933EF22D39FAD00D2B385 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				160933EB22D39F9D00D2B385 /* MessageController.swift */,
+				160933F022D39FB900D2B385 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		160933F022D39FB900D2B385 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				160933F322D3B30800D2B385 /* MessageListTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		160933F522D3B9AF00D2B385 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				160933F622D3B9AF00D2B385 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +156,17 @@
 				TargetAttributes = {
 					160933CF22D39A6700D2B385 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ClassKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				160933D622D39A6700D2B385 /* ViewController.swift in Sources */,
+				160933E722D39A9F00D2B385 /* Message.swift in Sources */,
 				160933D422D39A6700D2B385 /* AppDelegate.swift in Sources */,
+				160933EC22D39F9D00D2B385 /* MessageController.swift in Sources */,
+				160933F422D3B30800D2B385 /* MessageListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +355,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBulletinBoard27/CKBulletinBoard27.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3BD4H8DKG;
-				INFOPLIST_FILE = CKBulletinBoard27/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,9 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBulletinBoard27/CKBulletinBoard27.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3BD4H8DKG;
-				INFOPLIST_FILE = CKBulletinBoard27/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
